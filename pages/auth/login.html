@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../src/output.css" />
+
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main class="flex flex-row">
+        <section class="flex flex-col p-5 gap-5 h-dvh">
+            <button class="w-fit p-2 absolute m-1">Home</button>
+            <div class="flex flex-col h-full justify-center">
+                <div>
+                    <h1 class="text-2xl bolder">Entrar</h1>
+                    <p>Entre na sua conta para desfrutar ao maximo</p>
+                </div>
+                <form id="formLogin" action="" method="post" class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-2">
+                        <label for="">Email</label>
+                        <input type="email" name="" id="" class="p-1 border-1 outline-none" required>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="">Senha</label>
+                        <div class="flex flex-row justify-end items-center">
+                            <input type="password" name="" id="" class="p-1 border-1 outline-none flex-1" required>
+                            <button class="absolute p-1 m-1">-</button>
+                        </div>
+                    </div>
+                    <a href="">Esqueceu a senha?</a>
+                    <button type="submit">entrar</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
 </body>
+
 </html>
