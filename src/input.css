@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Componentes compartilhados pelas telas de formulário. */
 @layer components {
 	.field {
 		@apply rounded-xl border border-[#1d1d1b]/20 bg-white/50 px-4 py-3 outline-none transition;
