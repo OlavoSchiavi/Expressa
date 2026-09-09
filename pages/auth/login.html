@@ -1,43 +1,78 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../src/output.css" />
-
-    <title>Document</title>
+    <title>Entrar | Expressa</title>
 </head>
 
-<body>
-    <main class="flex flex-row">
-        <section class="flex flex-col p-5 gap-5 h-dvh">
-            <button class="w-fit p-2 absolute m-1">Home</button>
-            <div class="flex flex-col h-full justify-center">
-                <div>
-                    <h1 class="text-2xl bolder">Entrar</h1>
-                    <p>Entre na sua conta para desfrutar ao maximo</p>
-                </div>
-                <form id="formLogin" action="" method="post" class="flex flex-col gap-5">
+<body class="min-h-screen bg-[#f7f3ed] text-[#1d1d1b] selection:bg-[#ff6542] selection:text-white">
+    <main class="grid min-h-screen lg:grid-cols-[0.85fr_1.15fr]">
+        <section
+            class="relative hidden overflow-hidden bg-[#1d1d1b] p-10 text-[#f7f3ed] lg:flex lg:flex-col lg:justify-between">
+            <div class="absolute -right-20 -top-16 h-64 w-64 rounded-full bg-[#ff6542]"></div>
+            <a href="../index.html" class="relative z-10 text-2xl font-black tracking-[-0.08em]">expressa<span
+                    class="text-[#ff6542]">.</span></a>
+            <div class="relative z-10 max-w-md pb-10">
+                <p class="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Bom te ver por aqui</p>
+                <h2 class="text-6xl font-black leading-[0.9] tracking-[-0.07em]">A arte aproxima a gente.</h2>
+                <p class="mt-6 max-w-sm leading-7 text-white/65">Entre para descobrir novas vozes e acompanhar os
+                    artistas que movimentam seus territórios.</p>
+            </div>
+            <p class="relative z-10 text-xs text-white/45">Uma plataforma para talentos independentes.</p>
+        </section>
+
+        <section class="flex min-h-screen flex-col p-6 sm:p-10 lg:p-16">
+            <a href="../../index.html"
+                class="w-fit text-sm font-bold underline decoration-2 underline-offset-4 lg:hidden">← Voltar para a
+                home</a>
+            <div class="m-auto w-full max-w-md">
+                <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Acesse sua conta</p>
+                <h1 class="text-5xl font-black leading-none tracking-[-0.07em]">Entrar<span
+                        class="text-[#ff6542]">.</span></h1>
+                <p class="mt-4 text-[#1d1d1b]/65">Continue acompanhando a cena que está acontecendo agora.</p>
+                <form id="formLogin" action="" method="post" class="mt-10 flex flex-col gap-6">
                     <div class="flex flex-col gap-2">
-                        <label for="">Email</label>
-                        <input type="email" name="" id="" class="p-1 border-1 outline-none" required>
+                        <label for="loginEmail" class="text-sm font-bold">Email</label>
+                        <input type="email" name="email" id="loginEmail" autocomplete="email"
+                            class="rounded-xl border border-[#1d1d1b]/20 bg-white/50 px-4 py-3 outline-none transition placeholder:text-[#1d1d1b]/35 focus:border-[#ff6542] focus:ring-2 focus:ring-[#ff6542]/20"
+                            placeholder="voce@email.com" required />
                     </div>
                     <div class="flex flex-col gap-2">
-                        <label for="">Senha</label>
-                        <div class="flex flex-row justify-end items-center">
-                            <input type="password" name="" id="" class="p-1 border-1 outline-none flex-1" required>
-                            <button class="absolute p-1 m-1">-</button>
+                        <div class="flex items-center justify-between"><label for="loginPassword"
+                                class="text-sm font-bold">Senha</label><a href="#"
+                                class="text-xs font-bold text-[#ff6542]">Esqueci minha senha</a></div>
+                        <div class="relative">
+                            <input type="password" name="password" id="loginPassword" autocomplete="current-password"
+                                class="w-full rounded-xl border border-[#1d1d1b]/20 bg-white/50 px-4 py-3 pr-20 outline-none transition focus:border-[#ff6542] focus:ring-2 focus:ring-[#ff6542]/20"
+                                required />
+                            <button type="button" data-password-toggle="loginPassword"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-[#1d1d1b]/55 hover:text-[#ff6542]">Mostrar</button>
                         </div>
                     </div>
-                    <a href="">Esqueceu a senha?</a>
-                    <button type="submit">entrar</button>
+                    <button type="submit"
+                        class="rounded-full bg-[#ff6542] px-6 py-3.5 text-sm font-bold text-white shadow-[4px_4px_0_#1d1d1b] transition hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Entrar
+                        na Expressa ↗</button>
                 </form>
+                <p class="mt-8 text-center text-sm text-[#1d1d1b]/65">Ainda não tem uma conta? <a href="./cadastro.html"
+                        class="font-bold text-[#1d1d1b] underline decoration-[#ff6542] decoration-2 underline-offset-4">Crie
+                        agora</a></p>
             </div>
-
         </section>
     </main>
+    <script>
+        document.querySelectorAll("[data-password-toggle]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const input = document.getElementById(button.dataset.passwordToggle);
+                const isPassword = input.type === "password";
+                input.type = isPassword ? "text" : "password";
+                button.textContent = isPassword ? "Ocultar" : "Mostrar";
+            });
+        });
+    </script>
 </body>
 
 </html>

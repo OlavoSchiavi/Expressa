@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../src/output.css" />
+    <title>Cadastro de artista | Expressa</title>
+  </head>
+  <body class="min-h-screen bg-[#f7f3ed] text-[#1d1d1b] selection:bg-[#ff6542] selection:text-white">
+    <main class="grid min-h-screen lg:grid-cols-[0.8fr_1.2fr]">
+      <aside class="relative hidden overflow-hidden bg-[#1d1d1b] p-10 text-[#f7f3ed] lg:flex lg:flex-col lg:justify-between">
+        <div class="absolute -bottom-20 -left-20 h-72 w-72 rounded-full border-[3rem] border-[#ff6542]"></div>
+        <a href="../../index.html" class="relative z-10 text-2xl font-black tracking-[-0.08em]">expressa<span class="text-[#ff6542]">.</span></a>
+        <div class="relative z-10 max-w-sm pb-10"><p class="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Seu trabalho merece espaço</p><h2 class="text-6xl font-black leading-[0.9] tracking-[-0.07em]">Mostre o que só você faz.</h2><p class="mt-6 leading-7 text-white/65">Crie seu perfil, conte sua história e deixe novas pessoas encontrarem sua arte.</p></div>
+        <p class="relative z-10 text-xs text-white/45">Expressa · Vozes que movimentam</p>
+      </aside>
+      <section class="flex min-h-screen flex-col px-6 py-6 sm:px-10 sm:py-10 lg:px-16">
+        <div class="flex items-center justify-between gap-4"><a href="../../index.html" class="text-sm font-bold underline decoration-2 underline-offset-4">← Voltar para a home</a><a href="./login.html" class="text-sm font-bold text-[#ff6542]">Já tenho conta</a></div>
+        <div class="m-auto w-full max-w-2xl py-12">
+          <div class="mb-10"><p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Cadastro de artista</p><h1 class="text-5xl font-black leading-none tracking-[-0.07em] sm:text-6xl">Vamos contar sua história<span class="text-[#ff6542]">.</span></h1><p class="mt-4 max-w-lg text-[#1d1d1b]/65">Leva poucos minutos. Você pode voltar e revisar tudo antes de publicar seu perfil.</p></div>
+          <div class="mb-10"><div class="mb-3 flex items-center justify-between text-xs font-bold uppercase tracking-widest text-[#1d1d1b]/55"><span id="stepLabel">Etapa 1 de 4</span><span id="stepName">Sobre você</span></div><div class="h-1.5 overflow-hidden rounded-full bg-[#1d1d1b]/10"><div id="progressBar" class="h-full w-1/4 rounded-full bg-[#ff6542] transition-all duration-300"></div></div><div class="mt-5 grid grid-cols-4 gap-2 text-center text-[10px] font-bold uppercase tracking-widest text-[#1d1d1b]/40 sm:text-xs"><span data-step-indicator class="text-[#ff6542]">Você</span><span data-step-indicator>Arte</span><span data-step-indicator>Acesso</span><span data-step-indicator>Revisão</span></div></div>
+          <form id="artistForm" action="" method="post" class="space-y-8">
+            <fieldset data-step class="step-panel space-y-5"><legend class="mb-1 text-2xl font-black tracking-[-0.04em]">Primeiro, quem é você?</legend><p class="mb-6 text-sm text-[#1d1d1b]/60">Esses dados ajudam a gente a apresentar você com autenticidade.</p><div class="grid gap-5 sm:grid-cols-2"><div class="flex flex-col gap-2 sm:col-span-2"><label for="fullName" class="text-sm font-bold">Nome completo</label><input type="text" name="full_name" id="fullName" autocomplete="name" placeholder="Seu nome" required class="field" /></div><div class="flex flex-col gap-2"><label for="artistName" class="text-sm font-bold">Nome artístico</label><input type="text" name="artist_name" id="artistName" placeholder="Como o público conhece você?" required class="field" /></div><div class="flex flex-col gap-2"><label for="phone" class="text-sm font-bold">Telefone</label><input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="(00) 00000-0000" required class="field" /></div><div class="flex flex-col gap-2 sm:col-span-2"><label for="city" class="text-sm font-bold">Cidade e estado</label><input type="text" name="city" id="city" autocomplete="address-level2" placeholder="Ex.: São Paulo, SP" required class="field" /></div></div></fieldset>
+            <fieldset data-step class="step-panel hidden space-y-5"><legend class="mb-1 text-2xl font-black tracking-[-0.04em]">Agora, fale da sua arte.</legend><p class="mb-6 text-sm text-[#1d1d1b]/60">Um pouco do seu universo ajuda o público certo a encontrar você.</p><div class="grid gap-5 sm:grid-cols-2"><div class="flex flex-col gap-2"><label for="category" class="text-sm font-bold">Linguagem artística</label><select name="category" id="category" required class="field"><option value="">Escolha uma opção</option><option>Música</option><option>Fotografia</option><option>Dança</option><option>Artes visuais</option><option>Moda</option><option>Audiovisual</option><option>Literatura</option><option>Outra</option></select></div><div class="flex flex-col gap-2"><label for="since" class="text-sm font-bold">Atua desde</label><input type="number" name="since" id="since" min="1900" max="2026" placeholder="Ex.: 2018" class="field" /></div><div class="flex flex-col gap-2 sm:col-span-2"><label for="bio" class="text-sm font-bold">Sua bio</label><textarea name="bio" id="bio" rows="5" maxlength="500" placeholder="Conte em até 500 caracteres o que você cria e o que te move." required class="field resize-none"></textarea><span class="text-right text-xs text-[#1d1d1b]/45"><span id="bioCount">0</span>/500</span></div><div class="flex flex-col gap-2 sm:col-span-2"><label for="portfolio" class="text-sm font-bold">Instagram ou portfólio <span class="font-normal text-[#1d1d1b]/45">(opcional)</span></label><input type="url" name="portfolio" id="portfolio" placeholder="https://" class="field" /></div></div></fieldset>
+            <fieldset data-step class="step-panel hidden space-y-5"><legend class="mb-1 text-2xl font-black tracking-[-0.04em]">Crie seu acesso.</legend><p class="mb-6 text-sm text-[#1d1d1b]/60">Use esses dados para editar seu perfil e acompanhar a Expressa.</p><div class="flex flex-col gap-2"><label for="email" class="text-sm font-bold">Email</label><input type="email" name="email" id="email" autocomplete="email" placeholder="voce@email.com" required class="field" /></div><div class="grid gap-5 sm:grid-cols-2"><div class="flex flex-col gap-2"><label for="password" class="text-sm font-bold">Senha</label><div class="relative"><input type="password" name="password" id="password" autocomplete="new-password" required class="field w-full pr-20" /><button type="button" data-password-toggle="password" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-[#1d1d1b]/55 hover:text-[#ff6542]">Mostrar</button></div><div class="h-1 rounded-full bg-[#1d1d1b]/10"><div id="strengthBar" class="h-full w-0 rounded-full bg-[#ff6542] transition-all"></div></div></div><div class="flex flex-col gap-2"><label for="passwordConfirmation" class="text-sm font-bold">Confirmar senha</label><div class="relative"><input type="password" name="password_confirmation" id="passwordConfirmation" autocomplete="new-password" required class="field w-full pr-20" /><button type="button" data-password-toggle="passwordConfirmation" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-[#1d1d1b]/55 hover:text-[#ff6542]">Mostrar</button></div></div></div><label class="flex items-start gap-3 pt-3 text-sm text-[#1d1d1b]/65"><input type="checkbox" name="terms" required class="mt-1 accent-[#ff6542]" /><span>Li e concordo com os termos da Expressa e autorizo a divulgação do meu perfil artístico.</span></label></fieldset>
+            <fieldset data-step class="step-panel hidden space-y-5"><legend class="mb-1 text-2xl font-black tracking-[-0.04em]">Tudo certo por aqui?</legend><p class="mb-6 text-sm text-[#1d1d1b]/60">Revise seus dados. Depois é só enviar e começar a fazer parte da rede.</p><div id="review" class="divide-y divide-[#1d1d1b]/10 rounded-2xl border border-[#1d1d1b]/10 bg-white/40"></div><p class="rounded-xl bg-[#e9e3d8] p-4 text-sm leading-6 text-[#1d1d1b]/70">Seu perfil ficará visível para a comunidade após a aprovação da equipe Expressa.</p></fieldset>
+            <div class="flex items-center justify-between gap-4 border-t border-[#1d1d1b]/10 pt-6"><button id="previousButton" type="button" class="invisible rounded-full border border-[#1d1d1b] px-5 py-3 text-sm font-bold transition hover:bg-[#1d1d1b] hover:text-white">← Voltar</button><button id="nextButton" type="button" class="rounded-full bg-[#ff6542] px-6 py-3 text-sm font-bold text-white shadow-[4px_4px_0_#1d1d1b] transition hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Continuar ↗</button><button id="submitButton" type="submit" class="hidden rounded-full bg-[#1d1d1b] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#ff6542]">Publicar meu perfil ↗</button></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script>
+      const form = document.querySelector("#artistForm");
+      const panels = [...document.querySelectorAll(".step-panel")];
+      const previousButton = document.querySelector("#previousButton");
+      const nextButton = document.querySelector("#nextButton");
+      const submitButton = document.querySelector("#submitButton");
+      const progressBar = document.querySelector("#progressBar");
+      const stepLabel = document.querySelector("#stepLabel");
+      const stepName = document.querySelector("#stepName");
+      const stepNames = ["Sobre você", "Sua arte", "Seu acesso", "Revisão"];
+      let currentStep = 0;
+
+      const getFields = (panel) => [...panel.querySelectorAll("input, select, textarea")];
+      const escapeHtml = (value) => value.replace(/[&<>\'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[character]));
+      const password = document.querySelector("#password");
+      const passwordConfirmation = document.querySelector("#passwordConfirmation");
+
+      function validatePasswords() {
+        passwordConfirmation.setCustomValidity(password.value === passwordConfirmation.value ? "" : "As senhas precisam ser iguais.");
+      }
+
+      function updateReview() {
+        const values = [["Nome artístico", document.querySelector("#artistName").value], ["Cidade", document.querySelector("#city").value], ["Linguagem", document.querySelector("#category").value], ["Bio", document.querySelector("#bio").value], ["Email", document.querySelector("#email").value]];
+        document.querySelector("#review").innerHTML = values.map(([label, value]) => `<div class="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:justify-between"><span class="text-xs font-bold uppercase tracking-widest text-[#1d1d1b]/45">${label}</span><span class="max-w-md text-sm font-bold sm:text-right">${escapeHtml(value || "Não informado")}</span></div>`).join("");
+      }
+      function showStep(step) {
+        currentStep = step;
+        panels.forEach((panel, index) => panel.classList.toggle("hidden", index !== step));
+        progressBar.style.width = `${((step + 1) / panels.length) * 100}%`;
+        stepLabel.textContent = `Etapa ${step + 1} de ${panels.length}`;
+        stepName.textContent = stepNames[step];
+        document.querySelectorAll("[data-step-indicator]").forEach((indicator, index) => indicator.classList.toggle("text-[#ff6542]", index <= step));
+        previousButton.classList.toggle("invisible", step === 0);
+        nextButton.classList.toggle("hidden", step === panels.length - 1);
+        submitButton.classList.toggle("hidden", step !== panels.length - 1);
+        if (step === panels.length - 1) updateReview();
+      }
+      nextButton.addEventListener("click", () => { validatePasswords(); const fields = getFields(panels[currentStep]); if (!fields.every((field) => field.reportValidity())) return; showStep(currentStep + 1); });
+      previousButton.addEventListener("click", () => showStep(currentStep - 1));
+      form.addEventListener("submit", (event) => { validatePasswords(); if (!form.checkValidity()) { event.preventDefault(); const firstInvalid = form.querySelector(":invalid"); const invalidStep = panels.findIndex((panel) => panel.contains(firstInvalid)); showStep(invalidStep); firstInvalid.focus(); } });
+      document.querySelector("#bio").addEventListener("input", (event) => { document.querySelector("#bioCount").textContent = event.target.value.length; });
+      document.querySelector("#password").addEventListener("input", (event) => { const value = event.target.value; const score = [value.length >= 8, /[A-Z]/.test(value), /\d/.test(value)].filter(Boolean).length; document.querySelector("#strengthBar").className = `h-full rounded-full bg-[#ff6542] transition-all ${score === 1 ? "w-1/3" : score === 2 ? "w-2/3" : score === 3 ? "w-full" : "w-0"}`; });
+      password.addEventListener("input", validatePasswords);
+      passwordConfirmation.addEventListener("input", validatePasswords);
+      document.querySelectorAll("[data-password-toggle]").forEach((button) => button.addEventListener("click", () => { const input = document.getElementById(button.dataset.passwordToggle); const isPassword = input.type === "password"; input.type = isPassword ? "text" : "password"; button.textContent = isPassword ? "Ocultar" : "Mostrar"; }));
+      showStep(0);
+    </script>
+  </body>
+</html>

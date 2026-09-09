@@ -1,127 +1,187 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../assets/img/favicon.ico"
-      type="image/x-icon"
-    />
+<html lang="pt-BR">
 
-    <link rel="stylesheet" href="../src/output.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
 
-    <title>Expressa - Inicio</title>
-  </head>
-  <body>
-    <header class="flex flex-row justify-between p-5">
-      <span>Expressa</span>
-      <div class="flex flex-row gap-2">
-        <a href="">Entrar</a>
-        <button id="menuButton">menu</button>
-        <nav id="navbar">
-          <a href="">Inicio</a>
-        </nav>
+  <link rel="stylesheet" href="../src/output.css" />
+
+  <title>Expressa | Vozes que movimentam</title>
+</head>
+
+<body class="bg-[#f7f3ed] text-[#1d1d1b] selection:bg-[#ff6542] selection:text-white">
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+    <a href="./index.html" class="text-2xl font-black tracking-[-0.08em]">expressa<span
+        class="text-[#ff6542]">.</span></a>
+    <nav id="navbar" class="hidden items-center gap-8 text-sm font-bold md:flex">
+      <a href="#artistas" class="transition-colors hover:text-[#ff6542]">Artistas</a>
+      <a href="#sobre" class="transition-colors hover:text-[#ff6542]">Sobre o projeto</a>
+      <a href="#contato" class="transition-colors hover:text-[#ff6542]">Contato</a>
+      <a href="./auth/login.html"
+        class="rounded-full border border-[#1d1d1b] px-5 py-2 transition hover:bg-[#1d1d1b] hover:text-white">Entrar</a>
+    </nav>
+    <button id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false"
+      class="text-sm font-bold md:hidden">Menu +</button>
+  </header>
+  <nav id="mobileNav" class="hidden border-y border-[#1d1d1b]/10 bg-[#f7f3ed] px-6 py-5 md:hidden">
+    <div class="flex flex-col gap-4 text-sm font-bold">
+      <a href="#artistas">Artistas</a>
+      <a href="#sobre">Sobre o projeto</a>
+      <a href="#contato">Contato</a>
+      <a href="./auth/login.html">Entrar</a>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero -->
+    <section
+      class="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10 lg:pt-20">
+      <div class="flex flex-col items-start gap-6">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Uma vitrine para quem cria</p>
+        <h1 class="max-w-xl text-5xl font-black leading-[0.94] tracking-[-0.07em] sm:text-7xl">A periferia tem <span
+            class="text-[#ff6542]">voz.</span> A gente faz ela chegar mais longe.</h1>
+        <p class="max-w-md text-lg leading-7 text-[#1d1d1b]/70">A Expressa conecta talentos da periferia a pessoas que
+          querem descobrir arte, cultura e histórias que transformam.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#artistas"
+            class="rounded-full bg-[#ff6542] px-6 py-3 text-sm font-bold text-white shadow-[4px_4px_0_#1d1d1b] transition hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Conheça
+            os artistas</a>
+          <a href="#sobre" class="text-sm font-bold underline decoration-2 underline-offset-4">Por que a Expressa?</a>
+        </div>
       </div>
-    </header>
-    <main>
-      <!-- Hero -->
-      <section class="p-5 flex flex-col md:flex-row gap-5">
-        <div class="flex flex-col gap-2 flex-1 md:justify-center">
-          <h2 class="text-2xl">Title <span class="font-bold">enf</span></h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti id
-            quis ex modi, ipsum ducimus numquam accusantium at dicta magnam
-            cupiditate tempore eos natus beatae. Quos veritatis laudantium fugit
-            nobis.
-          </p>
+      <div class="relative min-h-[25rem] overflow-hidden rounded-[2rem] bg-[#1d1d1b] p-4 sm:min-h-[31rem]">
+        <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#ff6542]"></div>
+        <div class="absolute bottom-6 left-6 z-10 max-w-[13rem] rounded-2xl bg-[#f7f3ed] p-4 shadow-xl">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#ff6542]">Em destaque</p>
+          <p class="mt-2 text-lg font-black leading-tight">A arte muda quando a gente muda o olhar.</p>
+          <p class="mt-3 text-xs font-bold">Maya Lima · Fotografia</p>
         </div>
-        <div class="flex flex-row gap-4 h-90 md:flex-1">
-          <img src="" alt="" class="flex flex-1 bg-gray-500 rounded-xl" />
-          <div class="flex flex-col gap-4 flex-1">
-            <img src="" alt="" class="flex flex-2 bg-gray-500 rounded-xl" />
-            <img src="" alt="" class="flex flex-1 bg-gray-500 rounded-xl" />
-          </div>
-        </div>
-      </section>
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1100&q=85"
+          alt="Público em uma exposição de arte"
+          class="h-full min-h-[23rem] w-full rounded-[1.5rem] object-cover opacity-85 sm:min-h-[29rem]" />
+      </div>
+    </section>
 
-      <!-- Objetivos -->
-      <section class="p-5 flex flex-col gap-4">
-        <h2 class="text-2xl">Title <span class="font-bold">enf</span></h2>
-        <p class="text-justify md:text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vitae
-          rem? Saepe a laudantium consequuntur quo repudiandae ullam
-        </p>
-        <div class="flex flex-col md:flex-row gap-5 text-center">
-          <div
-            class="flex flex-col gap-2 rounded-xl p-2 items-center shadow-md border border-gray-300"
-          >
-            <img src="" alt="" class="w-30 h-30" />
-            <h3>title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div
-            class="flex flex-col gap-2 rounded-xl p-2 items-center shadow-md border border-gray-300"
-          >
-            <img src="" alt="" class="w-30 h-30" />
-            <h3>title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div
-            class="flex flex-col gap-2 rounded-xl p-2 items-center shadow-md border border-gray-300"
-          >
-            <img src="" alt="" class="w-30 h-30" />
-            <h3>title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sobre -->
-      <section class="p-5 flex flex-col md:flex-row gap-4">
-        <div
-          class="flex flex-col gap-2 items-center text-justify md:items-start md:text-left flex-2"
-        >
-          <h2 class="text-2xl">Title <span class="font-bold">enf</span></h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-            ad, consequuntur vero consequatur suscipit pariatur hic, expedita,
-            adipisci quam veniam esse quaerat sit consectetur? Ipsum autem nobis
-            ducimus quis voluptas?
-          </p>
-          <a
-            href=""
-            class="flex flex-row gap-2 px-4 py-2 rounded-xl bg-blue-500 w-fit"
-          >
-            <span></span>
-            <p>Instagram</p>
-          </a>
-        </div>
-        <div class="flex flex-1">
-          <img src="" alt="" />
-        </div>
-      </section>
-
-      <!-- Colaboradores -->
-      <section class="p-5 flex flex-col gap-4 bg-gray-500">
-        <h2 class="text-2xl">Title <span class="font-bold">enf</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <!-- Objetivos -->
+    <section class="border-y border-[#1d1d1b]/10 bg-[#e9e3d8] px-6 py-16 lg:px-10">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <!-- vão ser puxados do banco de dados os colaboradores ativos -->
-          <div
-            class="flex flex-col items-center text-center p-2 gap-2 bg-white w-45 rounded-xl"
-          >
-            <img src="" alt="foto" class="w-40 h-40 rounded-lg" />
-            <h3>nome</h3>
-            <h4>função</h4>
-            <p>"frase inspiradora"</p>
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">O que fazemos</p>
+          <h2 class="max-w-sm text-4xl font-black leading-none tracking-[-0.06em]">Mais que divulgação. <span
+              class="text-[#ff6542]">Conexão.</span></h2>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-3">
+          <div class="border-t-2 border-[#1d1d1b] pt-4"><span class="text-3xl font-black text-[#ff6542]">01</span>
+            <h3 class="mt-4 text-xl font-black">Descubra</h3>
+            <p class="mt-2 text-sm leading-6 text-[#1d1d1b]/65">Encontre novas vozes, linguagens e pontos de vista.</p>
+          </div>
+          <div class="border-t-2 border-[#1d1d1b] pt-4"><span class="text-3xl font-black text-[#ff6542]">02</span>
+            <h3 class="mt-4 text-xl font-black">Apoie</h3>
+            <p class="mt-2 text-sm leading-6 text-[#1d1d1b]/65">Conheça o trabalho e fortaleça quem produz cultura
+              local.</p>
+          </div>
+          <div class="border-t-2 border-[#1d1d1b] pt-4"><span class="text-3xl font-black text-[#ff6542]">03</span>
+            <h3 class="mt-4 text-xl font-black">Compartilhe</h3>
+            <p class="mt-2 text-sm leading-6 text-[#1d1d1b]/65">Leve essas histórias para mais pessoas e territórios.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contato -->
-      <section class="p-5"></section>
-    </main>
-    <footer class="p-5"></footer>
-  </body>
+    <!-- Sobre -->
+    <section id="sobre" class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10">
+      <div class="overflow-hidden rounded-[2rem] bg-[#ff6542] p-8 text-white sm:p-12">
+        <p class="text-xs font-bold uppercase tracking-[0.3em]">Manifesto</p>
+        <p class="mt-20 text-4xl font-black leading-[0.95] tracking-[-0.06em] sm:text-6xl">Toda quebrada tem uma
+          história que merece ser ouvida.</p>
+      </div>
+      <div class="flex flex-col justify-center gap-5">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Sobre a Expressa</p>
+        <h2 class="text-4xl font-black leading-none tracking-[-0.06em]">Cultura feita perto, vista por todo mundo.</h2>
+        <p class="leading-7 text-[#1d1d1b]/70">Somos uma plataforma independente que aproxima artistas de periferia de
+          novos públicos. Aqui, cada perfil é uma porta de entrada para uma obra, um corre e uma comunidade.</p>
+        <a href="https://www.instagram.com/" class="w-fit font-bold underline decoration-2 underline-offset-4">Siga a
+          Expressa no Instagram ↗</a>
+      </div>
+    </section>
+
+    <!-- Colaboradores -->
+    <section id="artistas" class="bg-[#1d1d1b] px-6 py-16 text-[#f7f3ed] lg:px-10">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Gente que faz</p>
+            <h2 class="text-4xl font-black leading-none tracking-[-0.06em] sm:text-5xl">Conheça quem está criando.</h2>
+          </div>
+          <a href="./auth/cadastro.html" class="text-sm font-bold underline decoration-2 underline-offset-4">Quero
+            divulgar meu trabalho ↗</a>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- vão ser puxados do banco de dados os colaboradores ativos -->
+          <article class="group"><img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=85"
+              alt="Retrato de Nome"
+              class="aspect-[4/5] w-full rounded-2xl object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-[#ff6542]">Cargo</p>
+            <h3 class="mt-1 text-2xl font-black">Nome</h3>
+            <p class="mt-1 text-sm text-white/60">São Paulo, SP</p>
+          </article>
+          <article class="group"><img
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=85"
+              alt="Retrato de Nome"
+              class="aspect-[4/5] w-full rounded-2xl object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-[#ff6542]">Cargo</p>
+            <h3 class="mt-1 text-2xl font-black">Nome</h3>
+            <p class="mt-1 text-sm text-white/60">Osasco, SP</p>
+          </article>
+          <article class="group"><img
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=85"
+              alt="Retrato de Nome"
+              class="aspect-[4/5] w-full rounded-2xl object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-[#ff6542]">Cargo</p>
+            <h3 class="mt-1 text-2xl font-black">Nome</h3>
+            <p class="mt-1 text-sm text-white/60">Salvador, BA</p>
+          </article>
+          <article class="group"><img
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=85"
+              alt="Retrato de Nome"
+              class="aspect-[4/5] w-full rounded-2xl object-cover grayscale transition duration-500 group-hover:grayscale-0" />
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-[#ff6542]">Cargo</p>
+            <h3 class="mt-1 text-2xl font-black">Nome</h3>
+            <p class="mt-1 text-sm text-white/60">Recife, PE</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-20 lg:px-10">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#ff6542]">Chega junto</p>
+      <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <h2 class="max-w-2xl text-5xl font-black leading-[0.9] tracking-[-0.07em] sm:text-7xl">Sua arte tem lugar
+          aqui<span class="text-[#ff6542]">.</span></h2><a href="mailto:oi@expressa.com"
+          class="rounded-full bg-[#1d1d1b] px-7 py-4 text-center text-sm font-bold text-white transition hover:bg-[#ff6542]">Fale
+          com a gente ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-[#1d1d1b]/10 px-6 py-8 lg:px-10">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-[#1d1d1b]/60 sm:flex-row"><span
+        class="font-black tracking-[-0.05em] text-[#1d1d1b]">expressa<span
+          class="text-[#ff6542]">.</span></span><span>Feito para amplificar talentos independentes.</span><span>© 2026
+        Expressa</span></div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector("#menuButton");
+    const mobileNav = document.querySelector("#mobileNav");
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("hidden") === false;
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.textContent = isOpen ? "Fechar ×" : "Menu +";
+    });
+  </script>
+</body>
+
 </html>

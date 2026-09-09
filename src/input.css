@@ -1,3 +1,13 @@
 @import "tailwindcss";
+
+@layer components {
+	.field {
+		@apply rounded-xl border border-[#1d1d1b]/20 bg-white/50 px-4 py-3 outline-none transition;
+	}
+
+	.field:focus {
+		@apply border-[#ff6542] ring-2 ring-[#ff6542]/20;
+	}
+}
  
 /* Tem que dar esse comando para ele ir gerando o css: npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch */
